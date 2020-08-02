@@ -1,0 +1,4 @@
+Configure miss: floor
+Configure miss: sqrt
+Configure miss: opencv >= 1.0.0
+Configure miss: gavl >= 0.2.3
