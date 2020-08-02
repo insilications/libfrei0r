@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : libfrei0r
 Version  : 1.7.0
-Release  : 1
+Release  : 2
 URL      : file:///insilications/build/clearlinux/packages/libfrei0r/libfrei0r-v1.7.0.zip
 Source0  : file:///insilications/build/clearlinux/packages/libfrei0r/libfrei0r-v1.7.0.zip
 Summary  : minimalistic plugin API for video effects
@@ -37,12 +37,6 @@ BuildRequires : pkgconfig(cairo-xlib-xrender)
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
-# Ignore missing build ids
-%undefine _missing_build_ids_terminate_build
-# Disable automatic requeriments processing
-AutoReq: no
-# Disable automatic provides processing
-AutoProv: no
 
 %description
 select0r
@@ -86,7 +80,7 @@ unset http_proxy
 unset https_proxy
 unset no_proxy
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1596389606
+export SOURCE_DATE_EPOCH=1596389812
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -108,7 +102,7 @@ export RANLIB=gcc-ranlib
 export NM=gcc-nm
 #export CCACHE_DISABLE=1
 ## altflags1 end
-%autogen  --enable-cpuflags --enable-shared --enable-static
+%autogen  --enable-shared --enable-cpuflags --enable-static
 make  %{?_smp_mflags}  V=1 VERBOSE=1
 
 
@@ -120,7 +114,7 @@ unset no_proxy
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1596389606
+export SOURCE_DATE_EPOCH=1596389812
 rm -rf %{buildroot}
 %make_install
 

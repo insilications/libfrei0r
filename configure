@@ -1,1 +1,1 @@
---enable-cpuflags --enable-shared --enable-static
+--enable-shared --enable-cpuflags --enable-static
