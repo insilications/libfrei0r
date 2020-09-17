@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : libfrei0r
-Version  : 1.7.0
-Release  : 3
-URL      : file:///insilications/build/clearlinux/packages/libfrei0r/libfrei0r-v1.7.0.tar.gz
-Source0  : file:///insilications/build/clearlinux/packages/libfrei0r/libfrei0r-v1.7.0.tar.gz
+Version  : 1.7
+Release  : 4
+URL      : file:///insilications/build/clearlinux/packages/libfrei0r/libfrei0r-v1.7.tar.gz
+Source0  : file:///insilications/build/clearlinux/packages/libfrei0r/libfrei0r-v1.7.tar.gz
 Summary  : minimalistic plugin API for video effects
 Group    : Development/Tools
 License  : GPL-2.0
@@ -81,7 +81,7 @@ unset https_proxy
 unset no_proxy
 export SSL_CERT_FILE=/var/cache/ca-certs/anchors/ca-certificates.crt
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1599681156
+export SOURCE_DATE_EPOCH=1600336107
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -119,7 +119,7 @@ export SSL_CERT_FILE=/var/cache/ca-certs/anchors/ca-certificates.crt
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1599681156
+export SOURCE_DATE_EPOCH=1600336107
 rm -rf %{buildroot}
 %make_install
 
@@ -148,6 +148,7 @@ rm -rf %{buildroot}
 /usr/lib64/frei0r-1/RGB.so
 /usr/lib64/frei0r-1/addition.so
 /usr/lib64/frei0r-1/addition_alpha.so
+/usr/lib64/frei0r-1/aech0r.so
 /usr/lib64/frei0r-1/alpha0ps.so
 /usr/lib64/frei0r-1/alphaatop.so
 /usr/lib64/frei0r-1/alphagrad.so
